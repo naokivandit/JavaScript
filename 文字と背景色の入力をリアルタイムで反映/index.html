@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>文字と背景色の入力をリアルタイムで反映</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>名称</th>
+      <th>カラー</th>
+      <th>イメージ</th>
+    </tr>
+    <tr>
+      <td><input id="name" type="text" oninput="setImage()"></td>
+      <td><input id="color" type="text" oninput="setImage()"></td>
+      <td><input id="image" type="text"></td>
+    </tr>
+  </table>
+
+<script type="text/javascript">
+function setImage() {
+  var getName = document.getElementById("name").value;
+  var getColor = document.getElementById("color").value;
+  document.getElementById("image").value = getName;
+  document.getElementById("image").style.backgroundColor = getColor;
+}
+</script>
+
+</body>
+</html>
+
