@@ -42,7 +42,6 @@ var suuji = document.getElementsByName('suuji');
 for(var i = 0; i < 9; i++) {
   var f_shindo = document.getElementById('nyuryokuchi_' + i).value;
   if(f_shindo != "") {
-    // alert(f_shindo + ' > ' + check_suuji);
     if(f_shindo > Number(check_suuji)) {
       alert('チェックした数字以下の値を入力してください');
       return;
