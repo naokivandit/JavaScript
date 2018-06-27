@@ -65,9 +65,11 @@ for(var i = 0; i < 9; i++) {
       }
     }
 
-    if(f_shindo % 0.25 != 0) {
-      alert('0.25m単位で入力してください');
-      return;
+    if(document.getElementById('nyuryokuchi_' + (i + 1)).value != "") {
+      if(f_shindo % 0.25 != 0) {
+        alert('0.25m単位で入力してください');
+        return;
+      }
     }
 
     if(document.getElementById('name_' + i).value == "") {
