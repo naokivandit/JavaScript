@@ -10,7 +10,9 @@
     <input type="radio" name="suuji" value="10">10
     <input type="radio" name="suuji" value="20">20
 </div>
-<br>
+
+<input type="text" id="koteichi" value="4.87">
+<button onclick="tenki()">転記</button>
 
   <table border=1>
     <tr>
@@ -31,6 +33,33 @@
 
 <!-- JavaScript -->
 <script type="text/javascript">
+function tenki(){
+  var koteichi_value = document.getElementById('koteichi').value;
+
+  for(var i = 0; i < 9; i++) {
+    var f_shindo = document.getElementById('nyuryokuchi_' + i).value;
+    if(f_shindo == "") {
+        document.getElementById('nyuryokuchi_' + i).value = koteichi_value;
+        return;
+    }
+
+    if(f_shindo == koteichi_value) {
+      alert('もう数値が入力されています。');
+      return;
+    }
+
+    if(document.getElementById('nyuryokuchi_' + i).value >= Number(koteichi_value)) {
+      alert('降順に入力してください');
+      return;
+    }
+  }
+
+  if(f_shindo != "") {
+  alert('入力できません');
+  return;
+  }
+}
+
 function validationTest(){
 var suuji = document.getElementsByName('suuji');
   for(var i = 0; i < suuji.length; i++) {
