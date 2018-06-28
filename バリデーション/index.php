@@ -95,7 +95,7 @@ for(var i = 0; i < 9; i++) {
     }
 
     if(document.getElementById('nyuryokuchi_' + (i + 1)).value != "") {
-      if(f_shindo % 0.25 != 0) {
+      if(nyuuryokuran % 0.25 != 0) {
         alert('0.25m単位で入力してください');
         return;
       }
