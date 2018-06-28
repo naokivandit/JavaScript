@@ -37,13 +37,13 @@ function tenki(){
   var koteichi_value = document.getElementById('koteichi').value;
 
   for(var i = 0; i < 9; i++) {
-    var f_shindo = document.getElementById('nyuryokuchi_' + i).value;
-    if(f_shindo == "") {
+    var nyuuryokuran = document.getElementById('nyuryokuchi_' + i).value;
+    if(nyuuryokuran == "") {
         document.getElementById('nyuryokuchi_' + i).value = koteichi_value;
         return;
     }
 
-    if(f_shindo == koteichi_value) {
+    if(nyuuryokuran == koteichi_value) {
       alert('もう数値が入力されています。');
       return;
     }
@@ -54,7 +54,7 @@ function tenki(){
     }
   }
 
-  if(f_shindo != "") {
+  if(nyuuryokuran != "") {
   alert('入力できません');
   return;
   }
@@ -69,16 +69,16 @@ var suuji = document.getElementsByName('suuji');
   }
 
 for(var i = 0; i < 9; i++) {
-  var f_shindo = document.getElementById('nyuryokuchi_' + i).value;
-  if(f_shindo != "") {
-    if(f_shindo > Number(check_suuji)) {
+  var nyuuryokuran = document.getElementById('nyuryokuchi_' + i).value;
+  if(nyuuryokuran != "") {
+    if(nyuuryokuran > Number(check_suuji)) {
       alert('チェックした数字以下の値を入力してください');
       return;
     }
 
     if (i < 8) {
       if(document.getElementById('nyuryokuchi_' + (i + 1)).value != "") {
-        if(f_shindo >= document.getElementById('nyuryokuchi_' + (i + 1)).value) {
+        if(nyuuryokuran >= document.getElementById('nyuryokuchi_' + (i + 1)).value) {
           alert('降順に入力してください');
           return;
         }
@@ -87,7 +87,7 @@ for(var i = 0; i < 9; i++) {
 
     if(i > 1) {
       if(document.getElementById('nyuryokuchi_' + (i - 1)).value == "") {
-        if(f_shindo >= document.getElementById('nyuryokuchi_' + (i - 1)).value) {
+        if(nyuuryokuran >= document.getElementById('nyuryokuchi_' + (i - 1)).value) {
           alert('入力欄は詰めて入力してください');
           return;
         }
